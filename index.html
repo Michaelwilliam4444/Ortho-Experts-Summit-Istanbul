@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0E2A3D">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Ortho SAM · Istanbul 2026</title>
+<link rel="icon" type="image/png" sizes="32x32" href="images/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/icon-apple-180.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="phone">
+
+  <!-- ONBOARDING -->
+  <div class="onboarding" id="onboarding">
+    <svg class="motif" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+      <defs><pattern id="p1" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M20 0 L40 20 L20 40 L0 20 Z" fill="none" stroke="#C7973F" stroke-width="1"/>
+      </pattern></defs>
+      <rect width="300" height="300" fill="url(#p1)"/>
+    </svg>
+    <div class="cap">ORTHO SAM · ISTANBUL PROGRAM</div>
+    <h1>07–10 Oct 2026</h1>
+    <p class="sub">Point Hotel 5★ Taksim — Tripoli &amp; Benghazi groups<br><span style="opacity:.85">أهلاً بكم في اسطنبول</span></p>
+
+    <div class="photo-pick" id="obPhotoPick">
+      <img id="obPhotoImg" style="display:none;">
+      <svg id="obPhotoIcon" viewBox="0 0 24 24"><path d="M4 7h3l1.5-2h7L17 7h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="3.5"/></svg>
+    </div>
+    <input type="file" id="obPhotoInput" accept="image/*" style="display:none;">
+    <input type="text" id="obName" placeholder="Your name">
+    <button class="pill-btn gold" id="obEnter">Enter the event</button>
+    <div class="sponsor-card">
+      <span class="sponsor-label">Presented by</span>
+      <div class="sponsor-logos">
+        <img src="images/eva_logo.png" alt="EVA Pharma">
+        <div class="sponsor-div"></div>
+        <img src="images/xr_logo.png" alt="Thiotacid Plus XR" class="xrlogo">
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEWS -->
+  <div class="views" id="views">
+
+    <!-- HOME -->
+    <section class="view active" id="view-home">
+      <div class="topbar" style="padding:2px 0 0;">
+        <div>
+          <p class="eyebrow">TURKEY SAM · ISTANBUL</p>
+          <h1>Ortho SAM 2026</h1>
+        </div>
+        <div class="avatar-btn" id="homeAvatarBtn"><img id="homeAvatarImg" style="display:none;"><svg id="homeAvatarIcon" width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.7"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c1.4-3.8 4.4-5.5 7.5-5.5s6.1 1.7 7.5 5.5"/></svg></div>
+      </div>
+
+      <div class="hero">
+        <svg class="motif" viewBox="0 0 300 160" preserveAspectRatio="xMidYMid slice">
+          <defs><pattern id="p2" width="34" height="34" patternUnits="userSpaceOnUse">
+            <circle cx="17" cy="17" r="1.3" fill="#E7C77C"/><path d="M0 17h34M17 0v34" stroke="#E7C77C" stroke-width=".4"/>
+          </pattern></defs>
+          <rect width="300" height="160" fill="url(#p2)"/>
+        </svg>
+        <p class="eyebrow">07–10 October 2026</p>
+        <h2>Your Istanbul<br>companion is ready</h2>
+        <p class="meta">Venue: <strong>Point Hotel 5★ Taksim</strong><br>Groups: <strong>Tripoli &amp; Benghazi</strong></p>
+        <div class="countdown" id="countdown">
+          <div class="box"><b id="cdDays">–</b><span>Days</span></div>
+          <div class="box"><b id="cdHours">–</b><span>Hours</span></div>
+          <div class="box"><b id="cdMins">–</b><span>Minutes</span></div>
+        </div>
+      </div>
+
+      <p class="greeting"><b id="greetName">Welcome</b><span class="ar">استمتع برحلتك</span></p>
+
+      <div class="grid2">
+        <button class="tile" onclick="goTab('program')">
+          <svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>
+          <b>Full Program</b><span>4-day schedule</span>
+        </button>
+        <button class="tile" onclick="goTab('travel')">
+          <svg viewBox="0 0 24 24"><path d="M10.5 21l1.5-6 6-2-1-2-6 1.5L9 3 7 4l1.5 8.5-6 1L2 15l7 1.5z"/></svg>
+          <b>Flights &amp; Map</b><span>Times &amp; venue</span>
+        </button>
+        <button class="tile" onclick="goTab('tools')">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 12h7M12 8.5v7"/></svg>
+          <b>Currency</b><span>LYD · TRY · USD</span>
+        </button>
+        <button class="tile" onclick="openSheet()">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c1.4-3.8 4.4-5.5 7.5-5.5s6.1 1.7 7.5 5.5"/></svg>
+          <b>Edit Profile</b><span>Name &amp; photo</span>
+        </button>
+      </div>
+
+      <div class="section-title">ABOUT THIS EVENT <span class="rule"></span></div>
+      <div class="card sponsor-footer">
+        <div class="sponsor-logos">
+          <img src="images/eva_logo.png" alt="EVA Pharma">
+          <div class="sponsor-div"></div>
+          <img src="images/xr_logo.png" alt="Thiotacid Plus XR" class="xrlogo">
+        </div>
+        <p>Ortho SAM Istanbul 2026 is proudly presented by EVA Pharma, makers of Thiotacid Plus XR.</p>
+      </div>
+    </section>
+
+    <!-- PROGRAM -->
+    <section class="view" id="view-program">
+      <div class="topbar" style="padding:2px 0 0;">
+        <div><p class="eyebrow">SCHEDULE</p><h1>Program</h1></div>
+      </div>
+      <div class="daytabs" id="daytabs"></div>
+      <p class="daylabel" id="daylabel"></p>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <!-- TRAVEL -->
+    <section class="view" id="view-travel">
+      <div class="topbar" style="padding:2px 0 0;">
+        <div><p class="eyebrow">TRAVEL</p><h1>Flights &amp; Venue</h1></div>
+      </div>
+
+      <div class="section-title">BENGHAZI GROUP <span class="rule"></span></div>
+      <div class="boarding">
+        <div class="bhead"><b>Berniq Airways</b><span>NB0301 · Wed 07 Oct</span></div>
+        <div class="brow">
+          <div class="city"><b>BEN</b><span>Benghazi · 09:00</span></div>
+          <div class="plane-ico"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13 19v-5.5z"/></svg><small>3h</small></div>
+          <div class="city" style="text-align:right;"><b>IST</b><span>Istanbul · 13:00</span></div>
+        </div>
+        <div class="perf"><span>Hand bag 7kg · checked 23kg</span><span>Class Y</span></div>
+      </div>
+      <div class="boarding">
+        <div class="bhead"><b>Berniq Airways</b><span>NB0302 · Sat 10 Oct</span></div>
+        <div class="brow">
+          <div class="city"><b>IST</b><span>Istanbul · 14:00</span></div>
+          <div class="plane-ico"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13 19v-5.5z"/></svg><small>3h</small></div>
+          <div class="city" style="text-align:right;"><b>BEN</b><span>Benghazi · 16:00</span></div>
+        </div>
+        <div class="perf"><span>Hand bag 7kg · checked 23kg</span><span>Class Y</span></div>
+      </div>
+
+      <div class="section-title">TRIPOLI GROUP <span class="rule"></span></div>
+      <div class="boarding">
+        <div class="bhead"><b>Libyan Wings</b><span>YL0102 · Wed 07 Oct</span></div>
+        <div class="brow">
+          <div class="city"><b>MJI</b><span>Tripoli Mitiga · 08:30</span></div>
+          <div class="plane-ico"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13 19v-5.5z"/></svg><small>4.5h</small></div>
+          <div class="city" style="text-align:right;"><b>IST</b><span>Istanbul · 13:00</span></div>
+        </div>
+        <div class="perf"><span>Hand bag 7kg · checked 30kg</span><span>Class Y</span></div>
+      </div>
+      <div class="boarding">
+        <div class="bhead"><b>Libyan Wings</b><span>YL0103 · Sat 10 Oct</span></div>
+        <div class="brow">
+          <div class="city"><b>IST</b><span>Istanbul · 14:00</span></div>
+          <div class="plane-ico"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13 19v-5.5z"/></svg><small>4.5h</small></div>
+          <div class="city" style="text-align:right;"><b>MJI</b><span>Tripoli Mitiga · 16:30</span></div>
+        </div>
+        <div class="perf"><span>Hand bag 7kg · checked 30kg</span><span>Class Y</span></div>
+      </div>
+
+      <div class="section-title">LIVE LOCATION <span class="rule"></span></div>
+      <div class="maprow">
+        <iframe loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=28.9761%2C41.0337%2C28.9961%2C41.0437&layer=mapnik&marker=41.0387%2C28.9861"></iframe>
+      </div>
+      <div class="locbar">
+        <span id="locText">Tap to check your distance to the hotel</span>
+        <button onclick="locateMe()">LOCATE ME</button>
+      </div>
+
+      <div class="section-title">KEY PLACES <span class="rule"></span></div>
+      <div class="card" style="padding:6px 16px;">
+        <div class="place">
+          <div class="picon"><svg viewBox="0 0 24 24"><path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6"/></svg></div>
+          <div class="pname"><b>Point Hotel 5★ Taksim</b><span>Event venue &amp; hotel</span></div>
+          <a href="https://www.google.com/maps/search/?api=1&query=41.0387,28.9861" target="_blank">MAP</a>
+        </div>
+        <div class="place">
+          <div class="picon"><svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2.5 1.5V22l4-1 4 1v-1.5L13 19v-5.5z"/></svg></div>
+          <div class="pname"><b>Istanbul Airport</b><span>Confirm terminal on your ticket</span></div>
+          <a href="https://www.google.com/maps/search/?api=1&query=41.2753,28.7519" target="_blank">MAP</a>
+        </div>
+        <div class="place">
+          <div class="picon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></div>
+          <div class="pname"><b>Meat Moot Ortaköy</b><span>Welcome dinner · Day 1</span></div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Meat+Moot+Ortakoy+Istanbul" target="_blank">MAP</a>
+        </div>
+        <div class="place">
+          <div class="picon"><svg viewBox="0 0 24 24"><path d="M3 15c3-8 15-8 18 0"/><circle cx="12" cy="15" r="5.5"/></svg></div>
+          <div class="pname"><b>Sapanca Lake</b><span>Excursion · Day 2</span></div>
+          <a href="https://www.google.com/maps/search/?api=1&query=40.6953,30.2593" target="_blank">MAP</a>
+        </div>
+        <div class="place">
+          <div class="picon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></div>
+          <div class="pname"><b>Kuzu Beyi Restaurant</b><span>Gala dinner · Day 3</span></div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Kuzu+Beyi+Restaurant+Istanbul" target="_blank">MAP</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section class="view" id="view-tools">
+      <div class="topbar" style="padding:2px 0 0;">
+        <div><p class="eyebrow">TOOLS</p><h1>Currency &amp; Info</h1></div>
+      </div>
+
+      <div class="section-title">CURRENCY CONVERTER <span class="rule"></span></div>
+      <div class="card">
+        <div class="conv-row">
+          <div class="flagdot">LYD</div>
+          <input type="number" id="fLYD" inputmode="decimal" value="100">
+          <div class="unit">د.ل</div>
+        </div>
+        <div class="conv-row">
+          <div class="flagdot">TRY</div>
+          <input type="number" id="fTRY" inputmode="decimal">
+          <div class="unit">₺</div>
+        </div>
+        <div class="conv-row">
+          <div class="flagdot">USD</div>
+          <input type="number" id="fUSD" inputmode="decimal">
+          <div class="unit">$</div>
+        </div>
+        <div class="rate-toggle" onclick="toggleRates()">UPDATE RATES ▾</div>
+        <div class="rate-panel" id="ratePanel">
+          <div class="rr"><label>1 USD =  ___ LYD</label><input type="number" id="rLYD" value="6.35" step="0.01"></div>
+          <div class="rr"><label>1 USD =  ___ TRY</label><input type="number" id="rTRY" value="48.40" step="0.01"></div>
+          <p class="note">Indicative mid-market rates, Sep 2026. Bank &amp; exchange-office rates will differ — update the fields above with today's rate before you travel.</p>
+        </div>
+      </div>
+
+      <div class="section-title">TURKEY AT A GLANCE <span class="rule"></span></div>
+      <div class="infolist">
+        <div class="infocell"><span>Currency</span><b>Turkish Lira (₺)</b></div>
+        <div class="infocell"><span>Language</span><b>Turkish</b></div>
+        <div class="infocell"><span>Time zone</span><b>GMT+3, no DST</b></div>
+        <div class="infocell"><span>Electricity</span><b>230V · Type C/F</b></div>
+        <div class="infocell"><span>Dial code</span><b>+90</b></div>
+        <div class="infocell"><span>Emergency</span><b>112</b></div>
+      </div>
+      <p class="note">Most hotel &amp; restaurant staff in Istanbul speak English. A 5–10% tip is customary at restaurants. Check visa requirements for Libyan passport holders with the organizers before you travel.</p>
+    </section>
+
+  </div>
+
+  <!-- TAB BAR -->
+  <nav class="tabbar">
+    <button class="tab active" data-tab="home" onclick="goTab('home')">
+      <svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9a1 1 0 01-1 1h-4v-6H9v6H5a1 1 0 01-1-1z"/></svg>Home
+    </button>
+    <button class="tab" data-tab="program" onclick="goTab('program')">
+      <svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>Program
+    </button>
+    <button class="tab" data-tab="travel" onclick="goTab('travel')">
+      <svg viewBox="0 0 24 24"><path d="M10.5 21l1.5-6 6-2-1-2-6 1.5L9 3 7 4l1.5 8.5-6 1L2 15l7 1.5z"/></svg>Travel
+    </button>
+    <button class="tab" data-tab="tools" onclick="goTab('tools')">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 13a1.6 1.6 0 000-2l1.1-1.4-1.6-2.7-1.7.5a7 7 0 00-1.7-1L15 4h-3l-.5 1.8a7 7 0 00-1.7 1l-1.7-.5-1.6 2.7L7.6 11a1.6 1.6 0 000 2l-1.1 1.4 1.6 2.7 1.7-.5a7 7 0 001.7 1L12 20h3l.5-1.8a7 7 0 001.7-1l1.7.5 1.6-2.7z"/></svg>Tools
+    </button>
+  </nav>
+
+  <!-- EDIT PROFILE SHEET -->
+  <div class="sheet-bg" id="sheetBg" onclick="if(event.target===this)closeSheet()">
+    <div class="sheet">
+      <h3>Edit your profile</h3>
+      <div class="row">
+        <div class="photo-pick" style="width:64px;height:64px; border-color:#D8D0C0; margin:0;" id="sheetPhotoPick">
+          <img id="sheetPhotoImg" style="display:none;">
+          <svg id="sheetPhotoIcon" width="22" height="22" viewBox="0 0 24 24" stroke="#79726A" fill="none" stroke-width="1.6"><path d="M4 7h3l1.5-2h7L17 7h3a1 1 0 011 1v11a1 1 0 01-1 1H4a1 1 0 01-1-1V8a1 1 0 011-1z"/><circle cx="12" cy="13" r="3.5"/></svg>
+        </div>
+        <input type="text" id="sheetName" placeholder="Your name" style="flex:1;">
+      </div>
+      <input type="file" id="sheetPhotoInput" accept="image/*" style="display:none;">
+      <button class="pill-btn gold" style="width:100%; justify-content:center;" onclick="saveProfile()">Save</button>
+    </div>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
